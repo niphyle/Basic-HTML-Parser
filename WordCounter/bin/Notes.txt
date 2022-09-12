@@ -1,0 +1,8 @@
+ArrayList<String> friendsArrayList = new ArrayList<>(); dynamically sizes the list
+
+Last line before title:
+    *** START OF THE PROJECT GUTENBERG EBOOK THE RAVEN ***     THIS EBOOK WAS ONE OF PROJECT GUTENBERGâ??S EARLY 
+FILES. THERE ISAN IMPROVED ILLUSTRATED EDITION OF THIS TITLE WHICH MAY VIEWED AT EBOOK    [ #45484 ]
+
+First Line after poem:
+    *** END OF THE PROJECT GUTENBERG EBOOK THE RAVEN ***
