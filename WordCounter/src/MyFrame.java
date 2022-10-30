@@ -2,9 +2,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
-/**
- * A class to create the frame for the GUI.
- */
+
 public class MyFrame extends JFrame 
 {
 	public JButton beginButton;
@@ -19,9 +17,6 @@ public class MyFrame extends JFrame
         init();
     }
 
-    /**
-     * A method to initialize the elements of the frame.
-     */
     private void init()
     {
         //Initialize variables
@@ -62,9 +57,7 @@ public class MyFrame extends JFrame
 		this.setVisible(true);
     }
 }
- /**
-  * A class to listen for the user to begin, then calls the Word Counter class to begin parsing the file. This is followed by printing the results to the frame.
-  */
+
 class MyActionListener implements ActionListener
 {
     MyFrame fr;

@@ -10,15 +10,6 @@ public class WordCounter
         this.file = file;
     }
 
-    
-    /** 
-     * A method to begin and carry out the processing of the file.
-     * This method calls for the string to be trimmed and filtered so only the words remain. 
-     * Next, it calls for the words to be placed in a list.
-     * Finally it calls for the word frequency to be counted and only the top 20 to be returned.
-     * @param file
-     * @return String[]
-     */
     static String[] begin (String file) // make this return an item
     {
         String fullText = ReadFile("WordCounter\\TheRavenByEdgarAllanPoe.html");
