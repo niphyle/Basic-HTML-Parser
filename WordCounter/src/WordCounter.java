@@ -10,6 +10,11 @@ public class WordCounter
         this.file = file;
     }
 
+    
+    /** 
+     * @param file
+     * @return String[]
+     */
     static String[] begin (String file) // make this return an item
     {
         String fullText = ReadFile("WordCounter\\TheRavenByEdgarAllanPoe.html");
