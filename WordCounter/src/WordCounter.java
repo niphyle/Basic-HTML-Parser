@@ -10,6 +10,15 @@ public class WordCounter
         this.file = file;
     }
 
+    
+    /** 
+     * A method to begin and carry out the processing of the file.
+     * This method calls for the string to be trimmed and filtered so only the words remain. 
+     * Next, it calls for the words to be placed in a list.
+     * Finally it calls for the word frequency to be counted and only the top 20 to be returned.
+     * @param file
+     * @return String[]
+     */
     static String[] begin (String file) // make this return an item
     {
         String fullText = ReadFile("WordCounter\\TheRavenByEdgarAllanPoe.html");
@@ -31,7 +40,12 @@ public class WordCounter
         String[] wordArray = wordFrequency(wordList); 
         return wordArray;
     }
-    // A method to read the file 
+    
+    /** 
+     * A method to read the file
+     * @param file
+     * @return String
+     */
     private static String ReadFile(String file)
     {
         String result = null;
@@ -69,7 +83,12 @@ public class WordCounter
         return result;
     }
 
-    // A mthod to remove HTML tags
+    
+    /** 
+     * A method to remove HTML tags
+     * @param content
+     * @return String
+     */
     public static String removeHTML(String content)
     {
         String htmlTagPattern = "\\<.*?\\>";
@@ -77,13 +96,24 @@ public class WordCounter
         return content.replaceAll(htmlTagPattern, " ");
     }
 
-    // Remove string prior to title of the poem
+    
+    /** 
+     * Remove string prior to title of the poem
+     * @param content
+     * @param start
+     * @return String
+     */
     public static String trimStringBefore(String content, String start)
     {
         return content.substring(content.indexOf(start) + 10);
     }
 
-    // A method to remove everything after the poem's end
+    
+    /** 
+     * A method to remove everything after the poem's end
+     * @param content
+     * @return String
+     */
     public static String trimStringAfter(String content)
     {
         int index = content.indexOf("***"); // First unique characters after poem
@@ -93,7 +123,12 @@ public class WordCounter
         return result;
     }
 
-    // A method to clean up the string
+    
+    /** 
+     * A method to clean up the string
+     * @param content
+     * @return String
+     */
     public static String characterRemoval(String content)
     {
         content = content.replaceAll("[^a-zA-Z0-9\\s]", " ");
@@ -101,7 +136,12 @@ public class WordCounter
         return content;
     }
     
-    // A method to put the words from the poem into an array
+    
+    /** 
+     * A method to put the words from the poem into an array
+     * @param content
+     * @return List<String>
+     */
     public static List<String> stringToList(String content)
     {
         String splitHere = " ";
@@ -118,7 +158,12 @@ public class WordCounter
         return tempList;
     }
 
-    // A method to remove blank spaces
+    
+    /**
+     * A method to remove blank spaces 
+     * @param wordList
+     * @return List<String>
+     */
     static List<String> spaceSaver(List<String> wordList)
     {
         try
@@ -155,7 +200,12 @@ public class WordCounter
         return wordList;
     }
 
-    // A method to count word frequencies
+    
+    /** 
+     * A method to count word frequencies
+     * @param wordList
+     * @return String[]
+     */
     static String[] wordFrequency(List<String> wordList)
     {
         HashMap<String, Integer> hash = new HashMap<>();
@@ -183,7 +233,12 @@ public class WordCounter
         return wordArray;
     }
 
-    // A method to sort the hashmap for word frequency
+    
+    /** 
+     * A method to sort the hashmap for word frequency
+     * @param hash
+     * @return HashMap<String, Integer>
+     */
     static HashMap<String, Integer> sortByValue(HashMap<String, Integer> hash)
     {
         // Create a list using the HashMap
